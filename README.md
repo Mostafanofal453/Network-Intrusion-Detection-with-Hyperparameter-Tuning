@@ -1,7 +1,5 @@
 # Network Intrusion Detection with Hyperparameter Tuning
 
-[TOC]
-
 ## Problem’s overview
 The problem is about the increasing of modern computer networks and their connected applications that made network infrastructures at risk of cyberattacks and intrusions. Approaches like firewalls can not detect all these attacks, so the figure shows that we have malicious users who hack the network but the firewall can't distinguish between normal or malicious users.
 
