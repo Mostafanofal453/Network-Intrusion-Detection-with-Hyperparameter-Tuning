@@ -1,6 +1,39 @@
 # Network Intrusion Detection with Hyperparameter Tuning
 
-## Problem’s overview
+## Table of Contents
+
+[Problem's overview](#1)
+
+- [Dataset Source](#2)
+
+- [Multi-class Classification](#3)
+
+[The Project Flowchart](#4)
+
+[Results:](#5)
+
+- [Baseline Model Accuracy](#6)
+
+- [Feature selection and Dimentionality reduction](#7)
+
+- [Batch size](#8)
+
+- [Hidden Layers with No. of Neurons](#9)
+
+- [Learning rate with Optimizer](#10)
+
+- [Activation Function](#11)
+
+- [Comparing Results](#12)
+
+  - [T-SNE Figures](#13)
+
+  - [Confusion Matrix](#14)
+
+[Conclusion](#15)
+
+## <a name="1">Problem’s overview</a>
+
 The problem is about the increasing of modern computer networks and their connected applications that made network infrastructures at risk of cyberattacks and intrusions. Approaches like firewalls can not detect all these attacks, so the figure shows that we have malicious users who hack the network but the firewall can't distinguish between normal or malicious users.
 
 ![Image](Pictures/pic1.png)
@@ -14,12 +47,12 @@ The solution to the problem is the usage of machine and deep learning as Network
 [ // ]: # "![image]&#40;https://drive.google.com/uc?export=view&id=111iv2OmCtmbkbE4OU-2YkOw9opdfQJvQ;"
 
 
-### Dataset Source
+### <a name="2">Dataset Source</a>
 
 **The dataset is from the University of Nevada, Reno**
 Link: https://www.tapadhirdas.com/unr-idd-dataset
 
-### Multi-class Classification
+### <a name="3">Multi-class Classification</a>
 The goal of multi-class classification is to differentiate the intrusions not only from normal working conditions but also from each other. Multi-class classification helps us to learn about the root causes of network intrusions. The labels for multi-class classification in UNR-IDD are illustrated in the accompanying table.
 
 | Label	      | Description                |
@@ -31,7 +64,7 @@ The goal of multi-class classification is to differentiate the intrusions not on
 |Blackhole    | 	Blackhole Attack.         |
 |Diversion    | 	Traffic Diversion Attack. |
 
-## The Project Flowchart
+## <a name="4">The Project Flowchart</a>
 For the steps of our project:
 
 - First, we implement the Exploratory data analysis on our dataset. 
@@ -60,15 +93,15 @@ For the steps of our project:
   
   
 
-## Results:
+## <a name="5">Results:</a>
 
-### BaseLine Model Accuracy
+### <a name="6">Baseline Model Accuracy</a>
 
 | Max training acc | Max test acc | Min training acc | Min test acc | Avg  training acc | Avg  test acc |
 | :--------------: | :----------: | :--------------: | :----------: | :---------------: | :-----------: |
 |    **62.12%**    |  **67.37%**  |    **50.47%**    |  **48.84%**  |    **59.59%**     |  **60.28%**   |
 
-### Feature selection and Dimensionality reduction
+### <a name="7">Feature selection and Dimensionality reduction</a>
 
 |                    | Best Feature Number | AVG\_valid\_acc         |
 | ------------------ | ------------------- | ----------------------- |
@@ -76,7 +109,7 @@ For the steps of our project:
 | <mark>ANOVA</mark> | <mark>**14**</mark> | <mark>**66.66%**</mark> |
 | Mutual Information | **20**              | **65.77%**              |
 
-### Batch size
+### <a name="8">Batch size</a>
 
 | **Batch size= 32** | -            | -             | -            |       -        |       -       |       -       | **Batch size= 64** |       -       |      -       |       -        |       -       |       -       | **Batch size= 128** |       -       |      -       |       -        |                     -                      |
 | ------------------ | ------------ | ------------- | ------------ | :------------: | :-----------: | :-----------: | :----------------: | :-----------: | :----------: | :------------: | :-----------: | :-----------: | :-----------------: | :-----------: | :----------: | :------------: | :----------------------------------------: |
@@ -84,7 +117,7 @@ For the steps of our project:
 | **71.21**          | **72.9**     | **23.17**     | **69.87**    |   **68.76**    |   **71.08**   |   **72.47**   |     **72.01**      |   **17.64**   |  **70.58**   |   **69.56**    |   **71.47**   |   **71.7**    |      **74.33**      |   **27.97**   |  **71.56**   |   **68.01**    |         <mark>  **72.72** </mark>          |
 
 
-### Hidden Layers with No. of Neurons
+### <a name="9">Hidden Layers with No. of Neurons</a>
 
 |                                         | **1 hidden layer** |      -       |       -       |      -       |       -        |       -       | **2 hidden layer** |      -       |       -       |      -       |       -        |       -       | **4 hidden layer** |      -       |       -       |      -       |       -        |              -               | **8 hidden layer** |      -       |       -       |      -       |       -        |       -       |
 | :-------------------------------------: | :----------------: | :----------: | :-----------: | :----------: | :------------: | :-----------: | :----------------: | :----------: | :-----------: | :----------: | :------------: | :-----------: | :----------------: | :----------: | :-----------: | :----------: | :------------: | :--------------------------: | :----------------: | :----------: | :-----------: | :----------: | :------------: | :-----------: |
@@ -94,7 +127,7 @@ For the steps of our project:
 |                   30                    |     **75.75**      |  **75.22**   |   **35.85**   |  **71.65**   |   **73.29**    |   **74.18**   |     **76.97**      |    **77**    |   **28.94**   |  **73.79**   |   **74.74**    |   **75.8**    |     **78.46**      |  **78.78**   |   **33.44**   |  **70.23**   |   **75.36**    |            **76**            |     **78.23**      |  **79.67**   |   **25.08**   |  **72.72**   |   **74.64**    |   **76.54**   |
 |                   40                    |     **75.71**      |  **75.75**   |   **32.45**   |  **73.08**   |   **73.26**    |   **74.75**   |     **78.12**      |  **77.71**   |   **41.77**   |  **74.68**   |   **75.65**    |   **76.43**   |     **78.84**      |  **77.36**   |   **37.91**   |  **72.54**   |   **76.14**    |          **74.86**           |     **80.22**      |  **77.71**   |   **33.52**   |   **70.4**   |   **76.74**    |   **74.15**   |
 
-### Learning rate with Optimizer
+### <a name="10">Learning rate with Optimizer</a>
 
 |                     | **Learning rate=0.1** |      -       |       -       |      -       |       -        |       -       | **Learning rate=0.01** |           -            |       -       |      -       |       -        |              -               | **Learning rate=0.001** |      -       |       -       |      -       |       -        |       -       |
 | :-----------------: | :-------------------: | :----------: | :-----------: | :----------: | :------------: | :-----------: | :--------------------: | :--------------------: | :-----------: | :----------: | :------------: | :--------------------------: | :---------------------: | :----------: | :-----------: | :----------: | :------------: | :-----------: |
@@ -105,16 +138,16 @@ For the steps of our project:
 | SGD (momentum =0.9) |       **79.45**       |  **78.96**   |   **23.29**   |  **78.96**   |   **56.47**    |   **78.96**   |       **94.76**        |       **78.25**        |   **37.68**   |  **73.08**   |   **87.55**    |          **75.86**           |        **84.84**        |  **79.67**   |   **15.84**   |  **71.12**   |   **78.04**    |   **74.83**   |
 |        Rprop        |       **79.45**       |  **78.96**   |   **23.29**   |  **78.96**   |   **56.47**    |   **78.96**   |       **94.27**        |       **77.36**        |   **45.32**   |  **69.69**   |    **88.3**    |          **73.54**           |        **94.95**        |  **79.85**   |   **42.38**   |  **72.72**   |   **89.19**    |    **76**     |
 
-### Activation Function
+### <a name="11">Activation Function</a>
 
 |      Relu      |       -       |       -        |       -       |       -        |      -       |  Leaky  Relu  |      -       |       -       |      -       |       -        |       -       |    Sigmoid     |      -       |       -       |      -       |       -        |       -       |     Tanh      |      -       |       -       |      -       |       -        |              -              |
 | :------------: | :-----------: | :------------: | :-----------: | :------------: | :----------: | :-----------: | :----------: | :-----------: | :----------: | :------------: | :-----------: | :------------: | :----------: | :-----------: | :----------: | :------------: | :-----------: | :-----------: | :----------: | :-----------: | :----------: | :------------: | :-------------------------: |
 | Max  train acc | Max  test acc | Min  train acc | Min  test acc | Avg  train acc | Avg test acc | Max train acc | Max test acc | Min train acc | Min test acc | Avg  train acc | Avg  test acc | Max train  acc | Max test acc | Min train acc | Min test acc | Avg  train acc | Avg  test acc | Max train acc | Max test acc | Min train acc | Min test acc | Avg  train acc | <mark>  Avg test acc</mark> |
 |   **83.27**    |   **81.63**   |   **59.37**    |   **75.04**   |   **80.56**    |  **77.57**   |   **80.48**   |  **80.21**   |   **60.63**   |  **73.79**   |   **77.38**    |   **77.21**   |   **77.47**    |  **78.96**   |   **30.39**   |  **69.87**   |   **74.43**    |   **74.4**    |   **86.36**   |   **80.3**   |   **62.04**   |  **74.33**   |   **81.99**    |  <mark>  **77.86** </mark>  |
 
-### Comparing Results
+### <a name="12">Comparing Results</a>
 
-#### T-SNE Figures
+#### <a name="13">T-SNE Figures</a>
 Original Dataset
 
 ![image](Pictures/Baseline.png)
@@ -133,7 +166,7 @@ ANOVA Selected Features
 
 [//]: # (![image]&#40;https://drive.google.com/uc?export=view&id=1YR3u-5cAZhT_5afiqB6gqwO5nhsQjuRo;)
 
-#### Confusion Matrix
+#### <a name="14">Confusion Matrix</a>
 
 | Base Line Model   | After The Feature Selection  | After The Parameter Selection |
 |-------------------|------------------------------|-------------------------------|
@@ -142,7 +175,7 @@ ANOVA Selected Features
 [//]: # (| ![image]&#40;https://drive.google.com/uc?export=view&id=1WlBMftTONCDkqK1jBrHCh5uAUIEzBBvU; | ![image]&#40;https://drive.google.com/uc?export=view&id=1okMadmfZsPFrHRcNrvs_ES1IF_OpOat9;        | ![image]&#40;https://drive.google.com/uc?export=view&id=1UW-627kW0QZacFYA6WBOz6IKoTjmv2s7;  |)
 
 
-## Conclusion
+## <a name="15">Conclusion</a>
 
 - EDA was performed to get insights from the data set and describe it.
 
