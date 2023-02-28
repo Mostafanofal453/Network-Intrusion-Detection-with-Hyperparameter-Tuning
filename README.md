@@ -1,22 +1,10 @@
 # Network Intrusion Detection with Hyperparameter Tuning
 
-## Objective
-
-The project was part of our AI & Data Science Master's degree at the University of Ottawa. 
-
-Kaggle link: [Link](https://www.kaggle.com/code/mostafanofal/network-intrusion-detection-hyperparameter-tuning)
-
-Check all the projects here: [Link](https://github.com/Mostafanofal453)
-
-## Team Members
-
-[Nada Abdellatef](https://www.linkedin.com/in/nada-abdellatef-846547181/)
-
-[Hadeer Mamdooh](https://www.linkedin.com/in/hadeer-mamdooh-204522171/)
-
-[Mostafa Nofal](https://www.linkedin.com/in/mostafa-nofal-772625194/)
-
 ## Table of Contents
+
+[Objective](#16)
+
+[Team Members](#17)
 
 [Problem's overview](#1)
 
@@ -41,12 +29,27 @@ Check all the projects here: [Link](https://github.com/Mostafanofal453)
 - [Activation Function](#11)
 
 - [Comparing Results](#12)
-
-  - [T-SNE Figures](#13)
-
-  - [Confusion Matrix](#14)
+- [T-SNE Figures](#13)
+  
+- [Confusion Matrix](#14)
 
 [Conclusion](#15)
+
+## <a name ="16"> Objective</a>
+
+The project was part of our AI & Data Science Master's degree at the University of Ottawa. 
+
+Kaggle link: [Link](https://www.kaggle.com/code/mostafanofal/network-intrusion-detection-hyperparameter-tuning)
+
+Check all the projects here: [Link](https://github.com/Mostafanofal453)
+
+## <a name = "17">Team Members </a>
+
+[Nada Abdellatef](https://www.linkedin.com/in/nada-abdellatef-846547181/)
+
+[Hadeer Mamdooh](https://www.linkedin.com/in/hadeer-mamdooh-204522171/)
+
+[Mostafa Nofal](https://www.linkedin.com/in/mostafa-nofal-772625194/)
 
 ## <a name="1">Problem’s overview</a>
 
