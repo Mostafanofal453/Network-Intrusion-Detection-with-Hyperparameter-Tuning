@@ -1,10 +1,20 @@
 # Network Intrusion Detection with Hyperparameter Tuning
 
+## Objective
+
 The project was part of our AI & Data Science Master's degree at the University of Ottawa. 
 
 Kaggle link: [Link](https://www.kaggle.com/code/mostafanofal/network-intrusion-detection-hyperparameter-tuning)
 
 Check all the projects here: [Link](https://github.com/Mostafanofal453)
+
+## Team Members
+
+[Nada Abdellatef](https://www.linkedin.com/in/nada-abdellatef-846547181/)
+
+[Hadeer Mamdooh](https://www.linkedin.com/in/hadeer-mamdooh-204522171/)
+
+[Mostafa Nofal](https://www.linkedin.com/in/mostafa-nofal-772625194/)
 
 ## Table of Contents
 
